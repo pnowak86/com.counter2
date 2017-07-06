@@ -19,14 +19,10 @@ public class CharsCounter implements Countable {
 
     @Override
     public int countLines(String filePath) {
-            int ch;
             int charsCount = 0;
-            int wordsCount = 0;
-            boolean prev = true;
-            //List<String> chars = null;
-            List<String> lines = null;
+            //List<String> lines = null;
             try {
-                lines = Files.readAllLines(Paths.get(filePath));
+                List <String> lines = Files.readAllLines(Paths.get(filePath));
                 System.out.println(lines.get(0));
                 System.out.println(lines.get(1));
                 List<String> words = new ArrayList<>();
