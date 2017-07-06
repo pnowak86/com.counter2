@@ -27,9 +27,8 @@ public class Main {
                 break;
         }
         }catch(Exception e){
-            System.err.println(e);
-            System.out.println("Wrong file name!");
+            //System.err.println(e.getStackTrace());
+            //System.out.println("Wrong file name!");
         }
-
     }
 }
