@@ -7,7 +7,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please select file");
-        String filepath = sc.nextLine();
+        try {
+            String filepath = sc.nextLine();
+
         System.out.println("What would you like to count? Possible answers: words, lines, chars. Enter 'end' to end program");
         String ans = sc.nextLine();
         switch (ans) {
@@ -23,6 +25,10 @@ public class Main {
                 CharsCounter cc = new CharsCounter();
                 System.out.println(cc.countLines(filepath));
                 break;
+        }
+        }catch(Exception e){
+            System.err.println(e);
+            System.out.println("Wrong file name!");
         }
 
     }
